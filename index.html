@@ -15,7 +15,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+.marquee{
+background:#ffcc00;
+color:#003366;
+font-weight:700;
+padding:8px 0;
+overflow:hidden;
+}
 
+.marquee-text{
+display:inline-block;
+white-space:nowrap;
+padding-left:100%;
+animation:chaychu 15s linear infinite;
+}
+
+@keyframes chaychu{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-100%);
+}
+}
 body{
 margin:0;
 font-family:'Montserrat',sans-serif;
@@ -115,7 +137,9 @@ background:rgba(0,0,0,0.25);
 <body>
 
 <div class="marquee">
-<marquee>🎉 Chào mừng kỷ niệm 95 năm thành lập Đoàn TNCS Hồ Chí Minh (26/03/1931 - 26/03/2026) 🎉</marquee>
+<div class="marquee-text">
+🎉 Chào mừng kỷ niệm 95 năm thành lập Đoàn TNCS Hồ Chí Minh (26/03/1931 - 26/03/2026) 🎉
+</div>
 </div>
 
 <div class="header">
