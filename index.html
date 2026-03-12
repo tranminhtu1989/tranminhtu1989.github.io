@@ -19,31 +19,9 @@
 background:#ffcc00;
 color:#003366;
 font-weight:700;
-padding:8px 0;
-overflow:hidden;
-}
-
-.marquee-text{
-display:flex;
-width:200%;
-animation:chaychu 20s linear infinite;
-}
-
-.marquee-text span{
-min-width:100%;
+padding:10px;
 text-align:center;
-}
-
-@keyframes chaychu{
-0%{
-transform:translateX(0);
-}
-50%{
-transform:translateX(-100%);
-}
-100%{
-transform:translateX(0);
-}
+font-size:18px;
 }
 body{
 margin:0;
@@ -144,14 +122,8 @@ background:rgba(0,0,0,0.25);
 <body>
 
 <div class="marquee">
-<div class="marquee-text">
-<span>
+<div id="khauhieu">
 🎉 Chào mừng kỷ niệm 95 năm thành lập Đoàn TNCS Hồ Chí Minh (26/03/1931 - 26/03/2026) 🎉
-</span>
-
-<span>
-🇻🇳 Nhiệt liệt chào mừng Ngày bầu cử đại biểu Quốc hội khóa XVI và đại biểu Hội đồng nhân dân các cấp nhiệm kỳ 2026-2031 🇻🇳
-</span>
 </div>
 </div>
 
@@ -195,6 +167,27 @@ background:rgba(0,0,0,0.25);
 <div class="footer">
 © 2026 - Đoàn Trường THPT Số 1 Trần Phú
 </div>
+<script>
 
+let khauhieu = [
+"🎉 Chào mừng kỷ niệm 95 năm thành lập Đoàn TNCS Hồ Chí Minh (26/03/1931 - 26/03/2026) 🎉",
+"🇻🇳 Nhiệt liệt chào mừng Ngày bầu cử đại biểu Quốc hội khóa XVI và đại biểu Hội đồng nhân dân các cấp nhiệm kỳ 2026-2031 🇻🇳"
+];
+
+let i = 0;
+
+setInterval(function(){
+
+i++;
+
+if(i >= khauhieu.length){
+i = 0;
+}
+
+document.getElementById("khauhieu").innerText = khauhieu[i];
+
+}, 6000);
+
+</script>
 </body>
 </html>
